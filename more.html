@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Phantom Profile</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="container2">
+            <div class="bottom-bar">
+                <div><a href="index.html">Home</a> | <a href="about.html">About</a></div>
+                <div class="heart"><a href="https://mariafbarrera.github.io/">♥</a></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="left-div">
+                        <img src="css/images/mex.jpeg" onclick="openImage(this)">
+                        <img src="css/images/peru.jpeg" onclick="openImage(this)" />
+                        <img src="css/images/chile.jpeg" onclick="openImage(this)" />
+                        <img src="css/images/lapaz.jpeg" onclick="openImage(this)" />
+                        <img src="css/images/titicaca.jpeg" onclick="openImage(this)" />
+                </div>
+                <div class="right-div">
+                    <img src="css/images/kitty.jpeg" onclick="openImage(this)">
+                    <img src="css/images/xochi.jpeg" onclick="openImage(this)" />
+                    <img src="css/images/bolivia.jpeg" onclick="openImage(this)" />
+                    <img src="css/images/umbrellas.jpeg" onclick="openImage(this)" />
+                    <img src="css/images/taquile-island.jpeg" onclick="openImage(this)" />
+                </div>
+            </div>
+            <div class="footer">
+                <p>Made with ♥ | &copy; 2024</p>
+            </div>
+        </div>
+        <div id="overlay" class="overlay" onclick="closeImage()">
+            <span class="closebtn">&times;</span>
+            <img class="expanded-image" id="expandedImage" />
+        </div>
+
+        <script>
+            function openImage(imgElement) {
+                var overlay = document.getElementById("overlay");
+                var expandedImage = document.getElementById("expandedImage");
+
+                expandedImage.src = imgElement.src;
+                overlay.style.display = "flex";
+            }
+
+            function closeImage() {
+                var overlay = document.getElementById("overlay");
+                overlay.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

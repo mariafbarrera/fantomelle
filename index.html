@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Website </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bottom-bar">
+            <div><a href="#">Home</a> | <a href="more.html">More</a></div>
+            <div class="heart"><a href="about.html">♥</a>
+            </div>
+        </div>
+        <div class="header">
+            <img class="cover-photo" src="css/images/phantom-banner.jpg" alt="Cover" />
+            <img class="avatar" src="css/images/campanopolis.jpeg" alt="Avatar" />
+        </div>
+        <div class="now-playing-bar">
+            <div>
+                Now Playing • The Phantom of The Opera
+                <a id="playPauseButton" class="music-pointer">▷</a>
+                0:01 ─── 4:24
+                <audio id="song">
+                    <source src="css/song/The Phantom of The Opera.mp3" />
+                </audio>
+            </div>
+        </div>
+        <div class="profile-info">
+            <h2>Maria Fernanda ✧ She/Her ✧ ENG/ESP</h2>
+            <p class="highlight"> Hello! My name is Maria Fernanda, but everyone calls me Maria! I am currently studying
+                Computer Science with a minor in Mathematics.
+            </p>
+            <p class="highlight"> ✧ "All the world's a stage, and all the men and women merely players..." ✧ </p>
+            <p class="highlight"> Read more about me by clicking on the ♥! </p>
+        </div>
+
+        <div class="banner">
+            <a href="#"> Learning Japanese, はじめまして！</a>
+            <a href="#"> Saxophone & Piano </a>
+            <a href="#"> Theatre Enthusiast</a>
+        </div>
+
+        <div class="pictures">
+            <div class="picture">
+                <img src="css/images/uyuni.jpg"/>
+            </div>
+            <div class="picture">
+                <img src="css/images/campanopoliss.png" />
+            </div>
+            <div class="picture">
+                <img src="css/images/argentina.png" />
+            </div>
+            <div class="picture">
+                <img src="css/images/cherry.png"/>
+            </div>
+            <div class="picture">
+                <img src="css/images/capy.png"/>
+            </div>
+            <div class="picture">
+                <img src="css/images/art.png" />
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ♥ | &copy; 2024</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("playPauseButton").addEventListener("click", function () {
+            const song = document.getElementById("song");
+            const button = document.getElementById("playPauseButton");
+
+            if (song.paused) {
+                song.play();
+                button.textContent = "||";
+            } else {
+                song.pause();
+                button.textContent = "▷";
+            }
+        });
+    </script>
+</body>
+</html>
